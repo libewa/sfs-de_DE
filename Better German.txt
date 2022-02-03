@@ -442,10 +442,10 @@
 
 [Part Categories]
     Basic_Parts=Standard
-    Six_Wide_Parts=6er
-    Eight_Wide_Parts=8er
-    Ten_Wide_Parts=10er
-    Twelve_Wide_Parts=12et
+    Six_Wide_Parts=6er-Tanks
+    Eight_Wide_Parts=8er-Tanks
+    Ten_Wide_Parts=10er-Tanks
+    Twelve_Wide_Parts=12er-Tanks
     Engine_Parts=Triebwerke
     Aerodynamics_Parts=Aerodynamik
     Fairings_Parts=Nutzlastverkleidungen
@@ -495,103 +495,122 @@
     Kolibri_Engine_Description=Eine kleine Rakete für Landemodule
     Ion_Engine_Description=Ein sehr effizientes Atomtriebwerk mit wenig Schub. Wird für interplanetare Reisen benutzt
     RCS_Thruster_Description=Ein paar kleine Raketchen zum Manövrieren
-    Aerodynamic_Nose_Cone_Description=An aerodynamic nose cone, used to improve the aerodynamics of side boosters
-    Aerodynamic_Fuselage_Description=An aerodynamic fuselage, used to cover engines
-    Fairing_Description=An aerodynamic fairing, used to encapsulate payloads
-    Battery_Description=A battery used to store electric power
-    Solar_Panel_Description=A solar panel that generates power when extended
-    RTG_Description=Radioisotope thermoelectric generator or RTG
-    Rover_Wheel_Description=Rover wheel used to drive on the surface of planets
-    Docking_Port_Description=A docking port which can be used to connect two vehicles together
-    Heat_Shield_Description=A heat resistant shield used to survive atmospheric reentry
-    Fuel_Pipe_Description=A pipe used to transfer fuel
+    Aerodynamic_Nose_Cone_Description=Eine aerodynamische Raketenspitze um den Luftwiderstand zu reduzieren 
+    Aerodynamic_Fuselage_Description=Ein aerodynamisches Rumpfteil um Triebwerke abzudecken
+    Fairing_Description=Eine aerodynamische Nutzlastverkleidung um die Ladung zu schützen
+    Battery_Description=Ein Akku um elektrische Energie zu speichern
+    Solar_Panel_Description=Ein Solarpanel, das ausgefahren Energie erzeugt
+    RTG_Description=Ein Radioisotopengenerator (RTG), im Prinzip ein kleines Atomkraftwerk
+    Rover_Wheel_Description=Ein Rad um auf Planeten herumzufahren. Wenn es sich dreht, dreht sich die ganze Rakete
+    Docking_Port_Description=Eine Andockstelle, mit der man zwei Raumschiffe verbinden kann
+    Heat_Shield_Description=Ein Hitzeschild, der die Rakete vor der Reibungshitze eines Wiedereintritts schützt
+    Fuel_Pipe_Description=Ein Schlauch mit dem Treibstoff zwischen Tanks bewegt wird
 
 [Modules]
-    Torque_Module_Torque=Torque: %value%kN
-    Separation_Force=Separation force: %value%kN
+    Torque_Module_Torque=Drehmoment: %value%kN
+    Separation_Force=Sprengkraft: %value%kN
 
-    Max_Heat_Tolerance=Heat tolerance: %temperature%
+    Max_Heat_Tolerance=maximale Hitze: %temperature%
 
-    State_On{0}=On
-    State_Off{0}=Off
+    State_On{0}=An
+    State_Off{0}=Aus
 
-    Engine_Module_State=Engine %state{0}%
-    Engine_On_Label=Engine on
+    Engine_Module_State=Triebwerk %state{0}%
+    Engine_On_Label=Triebwerk an
 
-    Msg_RCS_Module_State=RCS %state{0}%
+    Msg_RCS_Module_State=Steuerdüse %state{0}%
 
-    Wheel_Module_State=Rover wheel %state{0}%
-    Wheel_On_Label=Wheel on
+    Wheel_Module_State=Roverrad %state{0}%
+    Wheel_On_Label=Roverrad an
 
-    Panel_Expanded=Expanded
-    Landing_Leg_Expanded=Deployed
+    Panel_Expanded=Ausgefahren
+    Landing_Leg_Expanded=Ausgefahren
 
-    Detach_Edges_Label=Detach edges
+    Detach_Edges_Label=Ecken abstoßen
 
-    Info_Parachute_Max_Height=Max deploy height: %height%
-    Msg_Cannot_Deploy_Parachute_In_Vacuum=Cannot deploy parachute in a vacuum
-    Msg_Cannot_Deploy_Parachute_Above=Cannot deploy parachute above %height%
-    Msg_Cannot_Fully_Deploy_Above=Cannot fully deploy parachute above %height%
-    Msg_Cannot_Deploy_Parachute_While_Faster=Cannot deploy parachute when going faster than %velocity%
-    Msg_Cannot_Deploy_Parachute_While_Not_Moving=Cannot deploy parachute while not moving
-    Msg_Parachute_Half_Deployed=Parachute half deployed
-    Msg_Parachute_Fully_Deployed=Parachute fully deployed
-    Msg_Parachute_Cut=Parachute cut
+    Info_Parachute_Max_Height=Höchste Nutzhöhe: %height%
+    Msg_Cannot_Deploy_Parachute_In_Vacuum=Im Vakuum nützt ein Fallschirm nichts
+    Msg_Cannot_Deploy_Parachute_Above=Fallschirm kann über %height% Höhe nicht benutzt werden
+    Msg_Cannot_Fully_Deploy_Above=Fallschirm kann über %height% Höhe nicht voll ausgebreitet werden
+    Msg_Cannot_Deploy_Parachute_While_Faster=Fallschirm kann nicht ausgebreitet werden. Geschwindigkeit über %speed%
+    Msg_Cannot_Deploy_Parachute_While_Not_Moving=Fallschirm kann im Stillstand nicht benutzt werden
+    Msg_Parachute_Half_Deployed=Fallschirm ausgebreitet
+    Msg_Parachute_Fully_Deployed=Fallschirm voll ausgebreitet
+    Msg_Parachute_Cut=Fallschirm abgeschnitten 
 
 [Planets]
-    Sun{0}=Sun
-    Sun{1}=the Sun
-    Sun{2}=The Sun
-    Mercury{0}=Mercury
+    Sun{0}=Sonne
+    Sun{1}=die Sonne
+    Mercury{0}=Merkur
+    Mercury{2}=den Merkur
+    Mercury{3}=des Merkur
     Venus{0}=Venus
-    Earth{0}=Earth
-    Earth{1}=the Earth
-    Earth{2}=The Earth
-    Earth{3}=Earth's
-    Moon{0}=Moon
-    Moon{1}=the Moon
-    Moon{2}=The Moon
+    Venus{2}=die Venus
+    Venus{3}=der Venus
+    Earth{0}=Erde
+    Earth{2}=die Erde
+    Earth{3}=der Erde
+    Moon{0}=Mond
+    Moon{2}=den Mond
+    Moon{3}=des Mondes
     Mars{0}=Mars
+    Mars{2}=den Mars
+    Mars{3}=des Mars
     Phobos{0}=Phobos
+    Phobos{2}=Phobos
+    Phobos{3}=des Phobos
     Deimos{0}=Deimos
+    Deimos{2}=Deimos
+    Deimos{3}=des Deimos
     Jupiter{0}=Jupiter
-    Jupiter{1}=Jupiter
-    Jupiter{2}=Jupiter
-    Jupiter{3}=Jupiter's
+    Jupiter{2}=den Jupiter
+    Jupiter{3}=des Jupiters
     Europa{0}=Europa
-    Ganymede{0}=Ganymede
+    Europa{1}=Europa
+    Europa{2}=Europa
+    Europa{3}=der Europa
+    Ganymede{0}=Ganymed
+    Ganymede{1}=Ganymed
+    Ganymede{2}=Ganymed
+    Ganymede{3}=des Ganymed
     Io{0}=Io
+    Io{1}=Io
+    Io{2}=Io
+    Io{3}=der Io
     Callisto{0}=Callisto
+    Callisto{1}=Callisto
+    Callisto{2}=Callisto
+    Callisto{3}=der Callisto
 
 [Achievements]
-    Reached_Height=Reached %height% altitude
-    Reached_Karman_Line=Passed the Karman line, leaving the atmosphere and reaching space
-    Survived_Reentry=Reentered %planet{3}% atmosphere, max temperature %temperature%
+    Reached_Height=%height% Höhe erreicht
+    Reached_Karman_Line=Atmosphäre verlassen
+    Survived_Reentry= Atmosphäre %planet{3}% durchquert, Höchsttemperatur %temperature%
 
-    Reached_Low_Orbit=Reached low %planet{0}% orbit
-    Reached_High_Orbit=Reached high %planet{0}% orbit
-    Descend_Low_Orbit=Descended to low %planet{0}% orbit
-    Capture_Low_Orbit=Captured into low %planet{0}% orbit
-    Capture_High_Orbit=Captured into high %planet{0}% orbit
+    Reached_Low_Orbit=Niedriger Orbit um %planet{2}% erreicht
+    Reached_High_Orbit=Hohen Orbit um %planet{2}% erreicht
+    Descend_Low_Orbit=In niedrigen Orbit um %planet{2}% abgestiegen
+    Capture_Low_Orbit=In niedrigen Orbit um %planet{2}% abgebremst
+    Capture_High_Orbit=In hohen Orbit um %planet{2}% abgebremst
 
-    Entered_Lower_Atmosphere=Entered %planet{3}% lower atmosphere
-    Entered_Upper_Atmosphere=Entered %planet{3}% upper atmosphere
-    Left_Lower_Atmosphere=Reached %planet{3}% upper atmosphere
-    Left_Upper_Atmosphere=Escaped %planet{3}% atmosphere
+    Entered_Lower_Atmosphere=In niedrige Atmosphäre %planet{3}% eingetreten
+    Entered_Upper_Atmosphere=In höhere Atmosphäre %planet{3}% eingetreten
+    Left_Lower_Atmosphere=Höhere Atmosphäre %planet{3}% erreicht
+    Left_Upper_Atmosphere=Atmosphäre %planet{3}% verlassen
 
-    Landed=Landed on the surface of %planet{1}%
-    Crashed_Into_Terrain=Crashed into the surface of %planet{1}%
+    Landed=Auf der Oberfläche %planet{3}% gelandet
+    Crashed_Into_Terrain=Auf der Oberfäche %planet{3}% aufgeschlagen
 
-    Entered_SOI=Entered the sphere of influence of %planet{1}%
-    Escaped_SOI=Escaped the sphere of influence of %planet{1}%
+    Entered_SOI=In dem Einflussbereich %planet{3}% eingetreten
+    Escaped_SOI=Einflussbereich %planet{3}% verlassen
 
-    Docked_Suborbital=Docked in a suborbital trajectory of %planet{0}%
-    Docked_Orbit_Low=Docked in low %planet{0}% orbit
-    Docked_Orbit_Transfer=Docked in a transfer orbit of %planet{1}%
-    Docked_Orbit_High=Docked in high %planet{0}% orbit
-    Docked_Escape=Docked on an escape trajectory of %planet{1}%
-    Docked_Surface=Docked on the surface of %planet{1}%
+    Docked_Suborbital=In einer suborbitalen Umlaufbahn um %planet{2}% angedockt
+    Docked_Orbit_Low=In einem niedrigen Orbit um %planet{2}% angedockt
+    Docked_Orbit_Transfer=In einem Transferorbit um %planet{2}% angdockt
+    Docked_Orbit_High=In einem hohen Orbit um %planet{2}% angedockt
+    Docked_Escape=In einer Fluchtbahn von %planet{3}% angedockt
+    Docked_Surface=Auf der Oberfläche %planet{3}% angedockt
 
-    Recover_Home=Safely returned to %planet{1}%
-    Recover_Landed=Ended mission on the surface of %planet{1}%
-    Recover_Space=Ended mission in space around %planet{1}%
+    Recover_Home=Sicher auf %planet{2}% zurückgekehrt
+    Recover_Landed=Mission auf der Oberfläche %planet{3}% beendet
+    Recover_Space=Mission im Weltraum um %planet{2}% beendet
